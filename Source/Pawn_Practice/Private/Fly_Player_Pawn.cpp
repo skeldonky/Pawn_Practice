@@ -125,7 +125,7 @@ void AFly_Player_Pawn::Move(const FInputActionValue& value)
     FVector2D MoveInput = value.Get<FVector2D>();
 
     //바닥이 아니면(공중일때 기준 바닥 통과 X) 속도 감소
-    float CurrentMoveSpeed = IsOnGround() ? MoveSpeed : MoveSpeed * 0.5f;
+    float CurrentMoveSpeed = IsOnGround() ? MoveSpeed : MoveSpeed * 0.3f;
 
     if (!FMath::IsNearlyZero(MoveInput.X))
     {
